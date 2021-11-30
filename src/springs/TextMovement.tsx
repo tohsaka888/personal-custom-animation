@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { animated, useSpring, config } from "react-spring";
 
 type Props = {
