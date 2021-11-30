@@ -19,7 +19,7 @@ const configsRight: SpringConfig = {
 };
 
 function App() {
-  const [isMove, setIsMove] = useState<boolean>(false);
+  const [isMove, setIsMove] = useState<boolean>(true);
   return (
     <div>
       <button
