@@ -11,8 +11,8 @@ type Props = {
 export default function TextMovement({
   children,
   isMove,
-  initivalFontSize,
-  transformFontSize,
+  initivalFontSize = "1rem",
+  transformFontSize = "5rem",
 }: Props): JSX.Element {
   const styles = useSpring({
     from: {
