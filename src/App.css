@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  height: 30vh;
+  margin-left: 10vw;
+  background-color: red;
+  width: 80vw;
+}
