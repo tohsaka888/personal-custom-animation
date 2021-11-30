@@ -4,21 +4,21 @@ import { animated, useSpring, config } from "react-spring";
 type Props = {
   children: ReactElement;
   isMove: boolean;
-  initivalFontSize?: string;
+  initialFontSize?: string;
   transformFontSize?: string;
 };
 
 export default function TextMovement({
   children,
   isMove,
-  initivalFontSize = "1rem",
+  initialFontSize = "1rem",
   transformFontSize = "5rem",
 }: Props): JSX.Element {
   const styles = useSpring({
     from: {
       display: isMove ? "none" : "block",
       transform: isMove ? "translate3d(100%,0,0)" : "translate3d(0%,0,0)",
-      fontSize: isMove ? initivalFontSize : transformFontSize,
+      fontSize: isMove ? initialFontSize : transformFontSize,
     },
     to: isMove
       ? async (next) => {
@@ -27,7 +27,7 @@ export default function TextMovement({
           await next({ fontSize: transformFontSize });
         }
       : async (next) => {
-          await next({ fontSize: initivalFontSize });
+          await next({ fontSize: initialFontSize });
           await next({ transform: "translate3d(100%,0,0)" });
           await next({ display: "none" });
         },
