@@ -4,8 +4,8 @@ import { animated, useSpring, config } from "react-spring";
 type Props = {
   children: ReactElement;
   isMove: boolean;
-  initivalFontSize: string;
-  transformFontSize: string;
+  initivalFontSize?: string;
+  transformFontSize?: string;
 };
 
 export default function TextMovement({
