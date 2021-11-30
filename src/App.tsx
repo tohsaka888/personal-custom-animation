@@ -3,6 +3,7 @@ import "./App.css";
 import TextMovement from "./springs/TextMovement";
 import TransformCard from "./springs/TransformCard";
 import { SpringConfig } from "react-spring";
+import JumpCard from "./springs/JumpCard";
 
 const configsLeft: SpringConfig = {
   mass: 1,
@@ -29,7 +30,7 @@ function App() {
       >
         show?
       </button>
-      <TransformCard isMove={isMove} configs={configsLeft}>
+      {/* <TransformCard isMove={isMove} configs={configsLeft}>
         <div className="card">card</div>
       </TransformCard>
       <TextMovement
@@ -46,7 +47,12 @@ function App() {
         delay={200}
       >
         <div className="card">card</div>
-      </TransformCard>
+      </TransformCard> */}
+      <JumpCard height="30vh" width="10vw">
+        <div style={{ height: "30vh", width: "10vw", backgroundColor: "red" }}>
+          card
+        </div>
+      </JumpCard>
     </div>
   );
 }
