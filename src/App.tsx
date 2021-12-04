@@ -4,6 +4,7 @@ import TextMovement from "./springs/TextMovement";
 import TransformCard from "./springs/TransformCard";
 import { SpringConfig } from "react-spring";
 import JumpCard from "./springs/JumpCard";
+import ListTransform from "./springs/ListTransform";
 
 const configsLeft: SpringConfig = {
   mass: 1,
@@ -18,6 +19,8 @@ const configsRight: SpringConfig = {
   friction: 30,
   bounce: 0.8,
 };
+
+const items = [1, 2, 3, 4, 5]
 
 function App() {
   const [isMove, setIsMove] = useState<boolean>(true);
@@ -35,7 +38,7 @@ function App() {
       </TransformCard>
       <TextMovement
         isMove={isMove}
-        initivalFontSize="1rem"
+        initialFontSize="1rem"
         transformFontSize="5rem"
       >
         <div style={{ textAlign: "center" }}>Hello,我是Tohsaka888</div>
@@ -48,11 +51,12 @@ function App() {
       >
         <div className="card">card</div>
       </TransformCard> */}
-      <JumpCard height="30vh" width="10vw">
+      {/* <JumpCard height="30vh" width="10vw">
         <div style={{ height: "30vh", width: "10vw", backgroundColor: "red" }}>
           card
         </div>
-      </JumpCard>
+      </JumpCard> */}
+      <ListTransform items={items} isMove={isMove} />
     </div>
   );
 }
