@@ -1,15 +1,14 @@
-import { ReactElement } from "react";
 import { animated, useSpring, config } from "react-spring";
 
 type Props = {
-  children: ReactElement;
+  text: string;
   isMove: boolean;
   initialFontSize?: string;
   transformFontSize?: string;
 };
 
 export default function TextMovement({
-  children,
+  text,
   isMove,
   initialFontSize = "1rem",
   transformFontSize = "5rem",
@@ -33,5 +32,5 @@ export default function TextMovement({
         },
     config: config.gentle,
   });
-  return <animated.div style={styles}>{children}</animated.div>;
+  return <animated.div style={styles}>{text}</animated.div>;
 }

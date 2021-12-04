@@ -18,7 +18,7 @@ export default function ListTransform({ isMove, children }: Props) {
   const items = React.Children.toArray(children);
   const trails = useTrail(items.length, {
     from: isMove
-      ? { transfrom: "translate3d(100%,0,0)" }
+      ? { transform: "translate3d(100%,0,0)" }
       : { transform: "translate3d(0%,0,0)" },
     to: isMove
       ? { transform: "translate3d(0%,0,0)" }
