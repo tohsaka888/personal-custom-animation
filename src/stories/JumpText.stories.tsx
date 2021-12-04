@@ -53,9 +53,9 @@ const config: SpringConfig = { mass: 5, tension: 1000, friction: 80, bounce: 1 }
 CustomExample.args = {
   isJump: true,
   children: [
-    <Children text="这是一段跳动文字" color="black" />,
-    <Children text="这是一段跳动文字" color="black" fontSize="2.5rem" />,
-    <Children text="这是一段跳动文字" color="black" fontSize="3rem" />,
+    <Children text="这是一段文字" color="black" />,
+    <Children text="这是一段文字" color="black" fontSize="2.5rem" />,
+    <Children text="这是一段文字" color="black" fontSize="3rem" />,
   ],
   config: config,
 };
