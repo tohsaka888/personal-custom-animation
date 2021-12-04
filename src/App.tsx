@@ -5,6 +5,7 @@ import TransformCard from "./springs/TransformCard";
 import { SpringConfig } from "react-spring";
 import JumpCard from "./springs/JumpCard";
 import ListTransform from "./springs/ListTransform";
+import JumpText from "./springs/JumpText";
 
 const configsLeft: SpringConfig = {
   mass: 1,
@@ -20,7 +21,7 @@ const configsRight: SpringConfig = {
   bounce: 0.8,
 };
 
-const items = [1, 2, 3, 4, 5]
+const items = [1, 2, 3, 4, 5];
 
 function App() {
   const [isMove, setIsMove] = useState<boolean>(true);
@@ -56,7 +57,18 @@ function App() {
           card
         </div>
       </JumpCard> */}
-      <ListTransform items={items} isMove={isMove} />
+      <ListTransform isMove={isMove}>
+        <div>111111111111111</div>
+        <div>111111111111111</div>
+        <div>111111111111111</div>
+        <div>111111111111111</div>
+        <div>111111111111111</div>
+      </ListTransform>
+      <JumpText isJump={isMove}>
+        <div>1111111111</div>
+        <div>2222222222</div>
+        <div>3333333333</div>
+      </JumpText>
     </div>
   );
 }
