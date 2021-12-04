@@ -20,7 +20,7 @@ export default function JumpText({
   const items = React.Children.toArray(children);
   const trails = useTrail(items.length, {
     from: isJump
-      ? { y: 80, height: 0, opacity: 0 }
+      ? { y: 50, height: 0, opacity: 0 }
       : { y: 0, height: 36, opacity: 1 },
     to: isJump
       ? async (next) => {
